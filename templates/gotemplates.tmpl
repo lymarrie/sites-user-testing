@@ -1,6 +1,6 @@
 
 {{define "location.url" -}}
-{{.externalEntityId}}-{{.locale}}.html
+{{.externalEntityId}}.html
 {{- end}}
 
 
@@ -15,7 +15,7 @@
 {{end}}
 
 {{define "product.url" -}}
-{{.externalEntityId}}-{{.locale}}.html
+{{.externalEntityId}}.html
 {{- end}}
 
 
@@ -24,6 +24,7 @@
     <body>
         <h1>{{.name}}</h1>
         <p>SKU: {{.sku}}</p>
+        <img src={{.photoGallery} alt="photo">
         <p>Description: {{.richTextDescription}}</p>
         <div>
             <span>{{.size}}</span>
@@ -35,7 +36,7 @@
 
 
 {{define "faq.url" -}}
-{{.externalEntityId}}-{{.locale}}.html
+{{.externalEntityId}}.html
 {{- end}}
 
 
@@ -50,7 +51,7 @@
 
 
 {{define "event.url" -}}
-{{.externalEntityId}}-{{.locale}}.html
+{{.externalEntityId}}.html
 {{- end}}
 
 
@@ -63,6 +64,7 @@
         <div>
             {{.description}}
         </div>
+        <img src={{.photoGallery} alt="photo">
         <p>{{.isFreeEvent}}</p>
     </body>
 </html>
