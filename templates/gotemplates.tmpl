@@ -7,12 +7,8 @@
 <html>
     <body>
         <h1> Welcome to - {{.name}}, {{.c_parents}} </h1>
-        <p>{{range . }}
-            {{ .c_children }}
-            {{end}}</p>
-            
-        <p>{{range . }}
-            {{ .c_parents }}
+        <p>{{range .c_children }}
+            {{.name}}
             {{end}}</p>
     </body>
 </html>
