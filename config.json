@@ -9,51 +9,11 @@
 	"requireArtifactBuild": false,
 	"features": [
 		{
-			"name": "Location Page",
-			"streamLabel": "account-3434922/locations",
-			"goTemplateEntityPageSet": {
-				"template": "location.source",
-				"urlTemplate": "location.url"
-			}
-		},
-		{
 			"name": "City Page",
 			"streamLabel": "account-3434922/city",
 			"goTemplateEntityPageSet": {
 				"template": "city.source",
 				"urlTemplate": "city.url"
-			}
-		},
-		{
-			"name": "State Page",
-			"streamLabel": "account-3434922/state",
-			"goTemplateEntityPageSet": {
-				"template": "state.source",
-				"urlTemplate": "state.url"
-			}
-		},
-		{
-			"name": "Product Page",
-			"streamLabel": "account-3434922/products",
-			"goTemplateEntityPageSet": {
-				"template": "product.source",
-				"urlTemplate": "product.url"
-			}
-		},
-		{
-			"name": "FAQ Page",
-			"streamLabel": "account-3434922/faqs",
-			"goTemplateEntityPageSet": {
-				"template": "faq.source",
-				"urlTemplate": "faq.url"
-			}
-		},
-		{
-			"name": "Event Page",
-			"streamLabel": "account-3434922/events",
-			"goTemplateEntityPageSet": {
-				"template": "event.source",
-				"urlTemplate": "event.url"
 			}
 		}
 	],
