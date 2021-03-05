@@ -23,9 +23,14 @@
 {{define "city.source" -}}
 <html>
     <body>
-        <h1> Welcome to - {{.name}}</h1>
-        <p>{{range .c_children}} ... {{end}}</p>
-        <p>{{range .c_parents}} ... {{end}}</p>
+        <h1> Welcome to - {{.name}}, {{.c_parents}} </h1>
+        <p>{{range . }}
+            {{ .c_children }}
+            {{end}}</p>
+            
+        <p>{{range . }}
+            {{ .c_parents }}
+            {{end}}</p>
     </body>
 </html>
 {{end}}
@@ -40,7 +45,9 @@
 <html>
     <body>
         <h1> Welcome to - {{.name}}</h1>
-        <p>{{range .c_children}} ... {{end}}</p>
+        <p>{{range . }}
+            {{ .c_parents }}
+            {{end}}</p>
     </body>
 </html>
 {{end}}
