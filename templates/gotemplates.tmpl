@@ -1,20 +1,3 @@
-
-{{define "location.url" -}}
-{{.externalEntityId}}.html
-{{- end}}
-
-
-{{define "location.source" -}}
-<html>
-    <body>
-        <h1> Welcome to Luc's Electronics - {{.name}}</h1>
-        <p>{{.address}}</p>
-        <p>Hours: {{.hours}}</p>
-    </body>
-</html>
-{{end}}
-
-
 {{define "city.url" -}}
 {{.externalEntityId}}.html
 {{- end}}
@@ -31,79 +14,6 @@
         <p>{{range . }}
             {{ .c_parents }}
             {{end}}</p>
-    </body>
-</html>
-{{end}}
-
-
-{{define "state.url" -}}
-{{.externalEntityId}}.html
-{{- end}}
-
-
-{{define "state.source" -}}
-<html>
-    <body>
-        <h1> Welcome to - {{.name}}</h1>
-        <p>{{range . }}
-            {{ .c_parents }}
-            {{end}}</p>
-    </body>
-</html>
-{{end}}
-
-{{define "product.url" -}}
-{{.externalEntityId}}.html
-{{- end}}
-
-
-{{define "product.source" -}}
-<html>
-    <body>
-        <h1>{{.name}}</h1>
-        <p>SKU: {{.sku}}</p>
-        <img src={{.photoGallery} alt="photo">
-        <p>Description:{{.richTextDescription}}</p>
-        <div>
-            <span>{{.size}}</span>
-            <span>{{.price}}</span>
-        </div>
-    </body>
-</html>
-{{end}}
-
-
-{{define "faq.url" -}}
-{{.externalEntityId}}.html
-{{- end}}
-
-
-{{define "faq.source" -}}
-<html>
-    <body>
-        <h1>{{.name}}</h1>
-        <p>{{.answer}}</p>
-    </body>
-</html>
-{{end}}
-
-
-{{define "event.url" -}}
-{{.externalEntityId}}.html
-{{- end}}
-
-
-{{define "event.source" -}}
-<html>
-    <body>
-        <h1>{{.name}}</h1>
-        <h2>{{.time}}</h2>
-        <h3>{{.linkedLocation}}</h3>
-        <div>
-            {{.description}}
-        </div>
-        <img src={{.photoGallery} alt="photo">
-        <p>{{.isFreeEvent}}</p>
     </body>
 </html>
 {{end}}
