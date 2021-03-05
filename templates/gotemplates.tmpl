@@ -14,6 +14,37 @@
 </html>
 {{end}}
 
+
+{{define "city.url" -}}
+{{.externalEntityId}}.html
+{{- end}}
+
+
+{{define "city.source" -}}
+<html>
+    <body>
+        <h1> Welcome to - {{.name}}</h1>
+        <p>{{range .c_children}} ... {{end}}</p>
+        <p>{{range .c_parents}} ... {{end}}</p>
+    </body>
+</html>
+{{end}}
+
+
+{{define "state.url" -}}
+{{.externalEntityId}}.html
+{{- end}}
+
+
+{{define "state.source" -}}
+<html>
+    <body>
+        <h1> Welcome to - {{.name}}</h1>
+        <p>{{range .c_children}} ... {{end}}</p>
+    </body>
+</html>
+{{end}}
+
 {{define "product.url" -}}
 {{.externalEntityId}}.html
 {{- end}}
