@@ -15,6 +15,22 @@
 				"template": "location.source",
 				"urlTemplate": "location.url"
 			}
+		},
+		{
+			"name": "City Page",
+			"streamLabel": "account-3434922/city",
+			"goTemplateEntityPageSet": {
+				"template": "city.source",
+				"urlTemplate": "city.url"
+			}
+		},
+		{
+			"name": "State Page",
+			"streamLabel": "account-3434922/state",
+			"goTemplateEntityPageSet": {
+				"template": "state.source",
+				"urlTemplate": "state.url"
+			}
 		}
 	],
 	"ci_config": {
