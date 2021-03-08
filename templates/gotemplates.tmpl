@@ -17,8 +17,12 @@
 {{define "city.source" -}}
 <html>
     <body>
-        <h1> Welcome to - {{.name}} - ..{{.c_parents}}</h1>
-        <p>{{.c_children}}</p>
+        <h1> Welcome to - {{.name}} - {{.c_parents .name}}</h1>
+        {{range .c_children}}
+            <div class="children">
+                <h3 class="name">{{.name}}</h3>
+            </div>
+        {{end}}
     </body>
 </html>
 {{end}}
