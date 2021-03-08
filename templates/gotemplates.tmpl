@@ -24,17 +24,3 @@
     </body>
 </html>
 {{end}}
-
-{{define "state.url" -}}
-{{.externalEntityId}}.html
-{{- end}}
-{{define "state.source" -}}
-<html>
-    <body>
-        <h1> Welcome to - {{.name}}</h1>
-        {{range .c_children}}
-             <h3 class="child"> {{.c_children.name}} </h3>
-        {{end}}
-    </body>
-</html>
-{{end}}
