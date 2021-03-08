@@ -17,6 +17,8 @@
 {{define "city.source" -}}
 <html>
     <body>
+        <h2> Children: {{.c_children}} </h2>
+        <h3> Children element 0: {{index .c_children 0}} </h3>
         <h1> Welcome to {{.name}}, {{.c_parents}}</h1>
         {{range .c_children}}
              <h3 class="child"> hi </h3>
