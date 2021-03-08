@@ -19,9 +19,7 @@
     <body>
         <h1> Welcome to - {{.name}} - {{.c_parents}}</h1>
         {{range .c_children}}
-            <div class="children">
-                <h3 class="name">{{.name}}</h3>
-            </div>
+                {{.name}}
         {{end}}
     </body>
 </html>
