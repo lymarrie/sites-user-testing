@@ -17,10 +17,9 @@
 {{define "city.source" -}}
 <html>
     <body>
-        <h2> Children: {{.c_children}} </h2>
-        <h1> Welcome to {{.name}}, {{.c_parents}}</h1>
+        <h1> Welcome to {{.name}}, {{.c_parents.name}}</h1>
         {{range .c_children}}
-             <h3 class="child"> hello </h3>
+             <h3 class="child"> {{.c_children.name}} </h3>
         {{end}}
     </body>
 </html>
@@ -33,7 +32,9 @@
 <html>
     <body>
         <h1> Welcome to - {{.name}}</h1>
-        <p>{{.c_children}}</p>
+        {{range .c_children}}
+             <h3 class="child"> {{.c_children.name}} </h3>
+        {{end}}
     </body>
 </html>
 {{end}}
