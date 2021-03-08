@@ -1,3 +1,4 @@
+{{define "location.url" -}}
 {{.externalEntityId}}.html
 {{- end}}
 {{define "location.source" -}}
@@ -6,6 +7,30 @@
         <h1> Welcome to Luc's Electronics - {{.name}}</h1>
         <p>{{.address}}</p>
         <p>Hours: {{.hours}}</p>
+    </body>
+</html>
+{{end}}
+
+{{define "city.url" -}}
+{{.externalEntityId}}.html
+{{- end}}
+{{define "city.source" -}}
+<html>
+    <body>
+        <h1> Welcome to - {{.name}} - ..{{.c_parents}}</h1>
+        <p>{{.c_children}}</p>
+    </body>
+</html>
+{{end}}
+
+{{define "state.url" -}}
+{{.externalEntityId}}.html
+{{- end}}
+{{define "state.source" -}}
+<html>
+    <body>
+        <h1> Welcome to - {{.name}}</h1>
+        <p>{{.c_children}}</p>
     </body>
 </html>
 {{end}}
