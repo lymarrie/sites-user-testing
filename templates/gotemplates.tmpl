@@ -19,9 +19,7 @@
     <body>
         <h1> Welcome to {{.name}}, {{.c_parents.name}}</h1>
         <h2> Parents: {{.c_parents}} </h2>
-        <h2> Parents Index name: {{index .c_parents "name"}}</h2>
         <h2> Children: {{.c_children}} </h2>
-        <h2> Children Index name: {{index .c_children "name"}}</h2>
         
         {{range .c_parents}}
             <h3>i'm a parent</h3>
