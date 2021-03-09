@@ -22,6 +22,15 @@
         <h2> Parents Index name: {{index .c_parents "name"}}</h2>
         <h2> Children: {{.c_children}} </h2>
         <h2> Children Index name: {{index .c_children "name"}}</h2>
+        
+        {{range .c_parents}}
+            {[.}}
+        {{end}}
+
+        {{range .c_children}}
+            {[.}}
+            <h2> Children Index name: {{index .c_children "name"}}</h2>
+        {{end}} 
     </body>
 </html>
 {{end}}
