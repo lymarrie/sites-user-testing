@@ -11,9 +11,17 @@
       ANSWERS.init({
         apiKey: "6624aee5910bd79dc2a38bf2e9cb90a5",
         experienceKey: "sites_answers",
-        experienceVersion: "PRODUCTION",
+        experienceVersion: "STAGING",
         locale: "en", // e.g. en
-        businessId: "3434922"
+        businessId: "3434922",
+        onReady: function() {
+          ANSWERS.addComponent("SearchBar", {
+            container: ".search_form",
+            name: "search-bar", //Must be unique for every search bar on the same page
+            redirectUrl: "REPLACE_ME_SEARCH_RESULT_URL",
+            placeholderText: "Search...",
+          });
+        },
       });
     }
   </script>
