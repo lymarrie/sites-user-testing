@@ -4,10 +4,17 @@
 {{define "location.source" -}}
 <html>
     <body>
-        <h1> Welcome to Luc's Electronics - {{.name}}</h1>
-        <p>{{.address}}</p>
-        <p> hello world </p>
-        <p>Hours: {{.hours}}</p>
+    <div>{{template "header"}}</div>
+        <h1> Welcome to Luc&#39;s Electronics - {{.name}}</h1>
+        <p>Address: 
+         {{ range $key, $value := .address }}
+           <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+        {{ end }} </p>
+        <p>Hours: 
+          {{ range $key, $value := .hours }}
+               <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+          {{ end }}
+        </p>
     </body>
 </html>
 {{end}}
