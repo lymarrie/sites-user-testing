@@ -15,7 +15,14 @@
 				"template": "location.source",
 				"urlTemplate": "location.url"
 			}
-		}
+		},
+		{
+			"name": "ceo.html",
+			"staticPage": {
+			  "urlTemplate": "ceo.url",
+			  "template": "ceo.source"
+			}
+		  }
 	],
 	"ci_config": {
 		"output_directories": ["templates", "desktop"],
