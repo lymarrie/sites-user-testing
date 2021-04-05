@@ -1,34 +1,22 @@
 {
-	"configVersion": "1",
-	"https": true,
-	"liveSite": true,
-	"locales": [
-		"en"
-	],
-	"templateVersion": 8,
-	"requireArtifactBuild": false,
-	"features": [
-		{
-			"name": "Location Page",
-			"streamLabel": "account-3434922/locations",
-			"goTemplateEntityPageSet": {
-				"template": "location.source",
-				"urlTemplate": "location.url"
+	"artifactStructure": {
+		"assets": [
+			{
+				"root": "desktop"
 			}
-		},
-		{
-			"name": "ceo.html",
-			"staticPage": {
-			  "urlTemplate": "ceo.url",
-			  "template": "ceo.source"
+		],
+		"go_templates": [
+			{
+				"root": "templates"
 			}
-		  }
-	],
-	"ci_config": {
-		"output_directories": ["templates", "desktop"],
-		"build_setup_cmd": "echo setup",
-		"build_cmd": "echo hello",
-		"serve_setup_cmd": "echo setup",
-		"serve_cmd": "echo serve"
-	}
+		]
+	},
+    "build": {
+        "build_setup_cmd": "echo setup",
+        "build_cmd": "echo hello"
+    },
+    "livePreview": {
+        "serve_setup_cmd": "echo setup",
+        "serve_cmd": "echo serve"
+    }
 }

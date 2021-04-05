@@ -1,7 +1,7 @@
-{{define "location.url" -}}
-{{.externalEntityId}}.html
-{{- end}}
-{{define "location.source" -}}
++++
+streamId = "locations"
+urlFormat = "{{ .externalEntityId }}"
++++
 <html>
     <body>
     <div>{{template "header"}}</div>
