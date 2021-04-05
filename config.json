@@ -1,16 +1,5 @@
 {
-	"artifactStructure": {
-		"assets": [
-			{
-				"root": "desktop"
-			}
-		],
-		"go_templates": [
-			{
-				"root": "templates"
-			}
-		]
-	},
+    "output_directories": ["templates"],
     "build": {
         "build_setup_cmd": "echo setup",
         "build_cmd": "echo hello"
