@@ -11,7 +11,7 @@
             }
         ]
     },
-    "build": {
+    "buildArtifacts": {
         "build_setup_cmd": "echo setup",
         "build_cmd": "echo hello"
     },
