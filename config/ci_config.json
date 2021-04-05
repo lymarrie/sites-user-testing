@@ -5,7 +5,7 @@
                 "root": "desktop"
             }
         ],
-        "goTemplates": [
+        "go_templates": [
             {
                 "root": "templates"
             }
