@@ -1,0 +1,23 @@
+{
+    "configVersion": "1",
+    "artifactStructure": {
+        "assets": [
+            {
+                "root": "desktop"
+            }
+        ],
+        "goTemplates": [
+            {
+                "root": "templates"
+            }
+        ]
+    },
+    "build": {
+        "build_setup_cmd": "echo setup",
+        "build_cmd": "echo hello"
+    },
+    "livePreview": {
+        "serve_setup_cmd": "echo setup",
+        "serve_cmd": "echo serve"
+    }
+}
