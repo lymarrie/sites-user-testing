@@ -6,6 +6,7 @@ urlFormat: "{{ .externalEntityId }}.html"
 <html>
     <body>
         <h1> Welcome to Luc&#39;s Electronics - {{.name}}</h1>
+        <h2> Hello Mitch! </h2>
         <p>Address: 
          {{ range $key, $value := .address }}
            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
