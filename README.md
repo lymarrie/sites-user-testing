@@ -1,3 +1,3 @@
 # m4test
 
-Another deploy
+Hello team!
