@@ -19,9 +19,10 @@
           {{ end }}
         </p>
         <p> <h2> This location is located in </h2> </p>
-        {{range .c_parents}}
-          {{.name}}
-        {{end}}
+        // {{range .c_parents}}
+        //   {{.name}}
+        // {{end}}
+        {{.c_parents}}
     </body>
 </html>
 {{end}}
