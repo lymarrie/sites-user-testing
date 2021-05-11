@@ -1,12 +1,11 @@
 ---
-streamId: "account-3434922/locations"
-urlFormat: "{{ .externalEntityId }}.html"
+streamId: "pages-location-stream"
+urlFormat: "{{ .c_slug }}"
 ---
 {{define "gotemplates.tmpl" -}}
 <html>
     <body>
         <h1> Welcome to Luc&#39;s Electronics - {{.name}}</h1>
-        <h2> Hello Mitch! </h2>
         <p>Address: 
          {{ range $key, $value := .address }}
            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
@@ -16,6 +15,10 @@ urlFormat: "{{ .externalEntityId }}.html"
                <li><strong>{{ $key }}</strong>: {{ $value }}</li>
           {{ end }}
         </p>
+        <p> <h2> This location is located in </h2> </p>
+        {{range .c_parents}}
+          {{.name}}
+        {{end}}
     </body>
 </html>
 {{end}}
