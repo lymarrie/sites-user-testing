@@ -19,7 +19,9 @@
           {{ end }}
         </p>
         <p> <h2> This location is located in </h2> </p>
-        {{.c_parents}}
+          {{ range $key, $value := .c_parents}}
+            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+          {{end}}
     </body>
 </html>
 {{end}}
