@@ -11,13 +11,6 @@
         <h1> Welcome to - {{.name}}</h1>
 
         <p>
-        {{ range $key, $value := .c_parents}}
-          <li><strong>{{ $key }}</strong>: {{ $value }}</li>
-          <li> {{.name}} </li>
-        {{end}}
-        </p>
-
-        <p>
         <h3> Other cities in this state:</h3>
         <p>
         {{ range $key, $value := .c_children}}
