@@ -11,18 +11,15 @@
         <h1> Welcome to - {{.name}}</h1>
 
         <p> Cities in this state: 
-        {{ range .c_children }}
-        {{ range $key, $value := . }}
-            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
-        {{ end }}
-        {{ end }}
+            {{ range .c_children }}
+                {{ range $key, $value := . }}
+                    <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+                {{ end }}
+            {{ end }}
         </p>
 
-    {{ end }}
-
    {{ end }}
-
-
     </body>
+
 </html>
 {{end}}
