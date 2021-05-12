@@ -26,13 +26,11 @@
         </p>
 
         <p> <h2> This location is located in </h2> 
-          {{ range .c_parents }}
-            {{ range $key, $value := . }}
+            {{ range $key, $value := .c_parents }}
                 <li><strong>{{ $key }}</strong>: {{ $value }}</li>
             {{ end }}
-          {{ end }}
         </p>
-        
+
     </body>
 
 </html>
