@@ -23,7 +23,7 @@
 
         <p> <h2> This location is located in </h2> 
           {{ range .c_parents }}
-            {{ range $key, $value := .c_parents }}
+            {{ range $key, $value := . }}
                 <li><strong>{{ $key }}</strong>: {{ $value }}</li>
             {{ end }}
           {{ end }}
