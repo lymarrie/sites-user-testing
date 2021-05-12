@@ -1,0 +1,31 @@
+---
+{
+    "streamId": "pages-city-stream",
+    "urlFormat": "{{.c_slug}}"
+}
+---
+
+{{define "city.tmpl" -}}
+<html>
+    <body>
+      <h1> Welcome to - {{.name}}, {{.c_parents}}</h1>
+
+      <p>
+      {{ range $key, $value := .c_parents}}
+        <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+        <li> {{.name}} </li>
+      {{end}}
+      </p>
+
+      <p>
+      <h3> Other locations in this city:</h3>
+      <p>
+      {{ range $key, $value := .c_children}}
+        <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+        <li> {{.name}} </li>
+      {{end}}
+      </p>
+      </p>
+    </body>
+</html>
+{{end}}
