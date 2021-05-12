@@ -9,6 +9,15 @@
 <html>
     <body>
         <h1> Welcome to - {{.name}}</h1>
+
+        <p>
+            {{ range $key, $value := .c_children }}
+            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+        </p>
+
+   {{ end }}
+
+
     </body>
 </html>
 {{end}}
