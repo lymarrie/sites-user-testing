@@ -10,16 +10,6 @@
     <body>
       <h1> Welcome to - {{.name}}</h1>
 
-      <p> Located in the state of 
-        {{ range $key, $value := .c_parents }}
-        <li><strong>{{ $key }}</strong>: {{ $value }}</li>
-      </p>
-
-      <p> Other locations in this city: 
-        {{ range $key, $value := .c_children }}
-          <li><strong>{{ $key }}</strong>: {{ $value }}</li>
-      </p>
-
     </body>
 </html>
 {{end}}

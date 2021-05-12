@@ -10,10 +10,14 @@
     <body>
         <h1> Welcome to - {{.name}}</h1>
 
-        <p>
-            {{ range $key, $value := .c_children }}
+        <p> Cities in this state: 
+        {{ range .c_children }}
+        {{ range $key, $value := . }}
             <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+        {{ end }}
         </p>
+
+    {{ end }}
 
    {{ end }}
 
