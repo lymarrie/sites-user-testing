@@ -19,9 +19,7 @@
 
       <p> <h2> Other locations in this city: </h2> 
       {{ range .c_children }}
-        {{ range $key, $value := . }}
-            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
-        {{ end }}
+            <li><strong>{{ .c_slug }}</strong></li>
       {{ end }}
 
     </p>
