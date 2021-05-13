@@ -8,19 +8,15 @@
 {{define "city.tmpl" -}}
 <html>
     <body>
-      <h1> Welcome to - {{.name}}</h1>
-      
-      <p> <h2> Located in the beautiful state of  </h2> 
-      {{ range .c_parents }}
-        {{ range $key, $value := . }}
-            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+      <h1> Welcome to - {{.name}} - 
+        {{ range .c_parents }}
+          <a href="/{{ .c_slug }}">{{ .name }}</a>
         {{ end }}
-      {{ end }}
+      </h1>
 
       <p> <h2> Other locations in this city: </h2> 
       {{ range .c_children }}
             <li><a href="/{{ .c_slug }}">{{ .name }}</a></li>
-
       {{ end }}
 
     </p>

@@ -10,19 +10,15 @@
     <body>
         <h1> Welcome to Luc&#39;s Electronics - {{.name}}</h1>
         <p>Address: 
-          {{ range .address }}
-            {{ range $key, $value := . }}
+            {{ range $key, $value := .address }}
               <li><strong>{{ $key }}</strong>: {{ $value }}</li>
             {{ end }}
-          {{ end }}
         </p>
 
         <p>Hours: 
-          {{ range .hours }}
-            {{ range $key, $value := . }}
+            {{ range $key, $value := .hours }}
               <li><strong>{{ $key }}</strong>: {{ $value }}</li>
           {{ end }}
-        {{ end }}
         </p>
 
         <p> <h2> This location is located in </h2> 
