@@ -10,7 +10,7 @@
     <body>
         <h1> Welcome to Luc&#39;s Electronics - {{.name}}</h1>
         <p>Address: 
-          {{ range $key, $value := .address }}
+          {{ range .address }}
             {{ range $key, $value := . }}
               <li><strong>{{ $key }}</strong>: {{ $value }}</li>
             {{ end }}
@@ -18,7 +18,7 @@
         </p>
 
         <p>Hours: 
-          {{ range $key, $value := .hours }}
+          {{ range .hours }}
             {{ range $key, $value := . }}
               <li><strong>{{ $key }}</strong>: {{ $value }}</li>
           {{ end }}
