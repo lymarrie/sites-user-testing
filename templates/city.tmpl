@@ -9,6 +9,23 @@
 <html>
     <body>
       <h1> Welcome to - {{.name}}</h1>
+      
+      <p> <h2> Located in the beautiful state of  </h2> 
+      {{ range .c_parents }}
+        {{ range $key, $value := . }}
+            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+        {{ end }}
+      {{ end }}
+
+      <p> <h2> Other locations in this city: </h2> 
+      {{ range .c_children }}
+        {{ range $key, $value := . }}
+            <li><strong>{{ $key }}</strong>: {{ $value }}</li>
+        {{ end }}
+      {{ end }}
+
+    </p>
+
 
     </body>
 </html>
