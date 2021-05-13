@@ -19,7 +19,7 @@
 
       <p> <h2> Other locations in this city: </h2> 
       {{ range .c_children }}
-            <li><a href="/{{ .c_slug }}">Click me</a></li>
+            <li><a href="/{{ .c_slug }}">{{ .name }}</a></li>
 
       {{ end }}
 

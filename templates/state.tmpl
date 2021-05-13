@@ -12,9 +12,7 @@
 
         <p> Cities in this state: 
             {{ range .c_children }}
-                {{ range $key, $value := . }}
-                    <li><strong>{{ $key }}</strong>: {{ $value }}</li>
-                {{ end }}
+                <li><a href="/{{ .c_slug }}">{{ .name }}</a></li>
             {{ end }}
         </p>
 
