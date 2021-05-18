@@ -2,22 +2,23 @@
     "artifactStructure": {
         "assets": [
             {
-                "root": "desktop"
+                "root": "public"
             }
         ],
-        "goTemplates": [
-            {
+        "hbsTemplates": [
+            { 
                 "root": "templates"
             }
         ]
     },
+    "base_image_tag": "node-12.18",
     "dependencies": {
         "installDepsCmd": "echo install",
         "requiredFiles": []
     },
     "buildArtifacts": {
-        "build_setup_cmd": "echo setup",
-        "build_cmd": "echo hello"
+        "build_setup_cmd": "npm install",
+        "build_cmd": "npm run build"
     },
     "livePreview": {
         "serve_setup_cmd": "echo setup",
