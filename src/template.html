@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{{name}} - {{ geomodifier }} </title>
+    
+  </head>
+    <body>
+        <script src="/index.bundle.js"></script> 
+          <div class=" mx-auto  p-5">
+            <nav class="flex justify-between">
+                <div class='flex'>
+                  <div class="pr-5">
+                    <a href="#"><img class='object-contain h-20' src='https://a.mktgcdn.com/p/eEScuRbWJ_wg43YUVTraB3vfeDDbSEZC2aFGjwBLG7w/316x316.png'></a>
+                  </div>
+                  <ul class="flex flex-row text-xl font-bold text-blue-900 ">
+                    <li class="mt-10 pr-12"><a>Business </a></li>
+                    <li class="mt-10 pr-12"><a>Commercial</a></li>
+                    <li class="mt-10 pr-12"><a>Wealth Management</a></li>
+                    <li class="mt-10 pr-12"><a>Personal</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="float-right">
+                    <button class='bg-blue-900 rounded-md text-white px-8 py-2 mt-8 '>
+                      Sign In
+                    </button>
+                  </div>
+                </div>
+            </nav>
+          </div>
+
+
+        <div class='title bg-blue-900 pt-6 pb-6 border-b-8 border-green-400'> 
+          <h1 class='text-5xl  font-extralight text-white ml-6'> {{name}} - {{geomodifier}} </h1>
+        </div>
+        <div class="container mx-auto px-32">
+          <div class='mt-6  flex'> 
+            <div class='branch-details pr-32'>
+              <h4 class='text-2xl font-bold mb-4'>Branch Details</h4>
+              <div> 
+                <p> {{address.line1}} </p>
+                <p> {{address.city}}, {{address.region}} {{address.postalCode}}</p>
+              </div>
+              <p> {{phone}} </p>
+            </div>
+
+            <div class='branch-hours pr-32'>
+              <h4 class='text-2xl font-bold mb-4' >Branch Hours</h4>
+              <div class='hours-list'>
+                {{#each hours}}
+                  <p>{{@key}}
+                  {{#each this}}
+                    {{#each this}}
+                      {{this.start}}-{{this.end}}
+                    {{/each}}
+                  {{/each}} 
+                  </p> 
+                {{/each}}
+              </div>
+            </div>
+
+            <div class='branch-services pr-32'>
+              <h4 class='text-2xl font-bold mb-4'>Services</h4>
+              <ul class="services-list list-disc">
+                {{#each services}}
+                  <li>{{this}}</li>
+                {{/each}}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+    </body> 
+</html>

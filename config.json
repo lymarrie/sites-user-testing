@@ -1,0 +1,26 @@
+{
+	"configVersion": "1",
+	"https": true,
+	"templateVersion": 8,
+	"locales": [
+		"en"
+	],
+	"features": [
+		{
+			"name": "KG HBS EPS",
+			"streamLabel": "pages-locations",
+			"handlebarsTemplateEntityPageSet": {
+				"template": "content",
+				"urlTemplate": "url"
+			}
+		}
+	],
+	"ci_config": {
+		"base_image_tag": "node-12.18",
+		"output_directories": [ "desktop", "templates" ],
+		"build_setup_cmd": "npm install",
+		"build_cmd": "npm run build",
+		"serve_setup_cmd": "echo setup",
+		"serve_cmd": "echo serve"
+	}
+}
